@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio d'Oumar Abakar — ingénieur matériaux, chercheur et responsable de projets." />
+  <meta name="theme-color" content="#f2efe8" />
+  <title>O.A — Oumar Abakar</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23171914'/%3E%3Ctext x='32' y='40' text-anchor='middle' font-family='Arial,sans-serif' font-size='25' font-weight='700' fill='%23d8ff46'%3EO.A%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Manrope:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/src/style.css" />
+  <style>
+    /* Médias : remplacez les fichiers du dossier images en conservant leurs noms. */
+    .hero-title-row{display:grid;grid-template-columns:minmax(0,1fr) clamp(180px,21vw,300px);gap:clamp(24px,5vw,80px);align-items:center}
+    .hero-title-row h1{margin-inline:0}
+    .media-frame{position:relative;overflow:hidden;background:#d9d7cf;min-height:220px}
+    .media-frame img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1}
+    .media-frame .media-placeholder{position:absolute;inset:0;display:grid;place-items:center;padding:18px;text-align:center;font:500 10px/1.5 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:#6c6f66}
+    .profile-frame{aspect-ratio:4/5;min-height:0;border-radius:50% 50% 8px 8px;transform:rotate(2deg);border:1px solid rgba(23,25,20,.2)}
+    .profile-frame img{object-position:center 20%}
+    .media-gallery{display:grid;gap:8px;margin-top:28px}
+    .media-gallery.one{grid-template-columns:1fr}
+    .media-gallery.two{grid-template-columns:1.25fr .75fr}
+    .media-gallery.three{grid-template-columns:1.25fr .75fr;grid-template-rows:repeat(2,150px)}
+    .media-gallery.three .media-frame:first-child{grid-row:1/3}
+    .media-gallery .media-frame{min-height:210px}
+    .media-gallery.three .media-frame{min-height:0}
+    .usa-media{margin-top:35px;aspect-ratio:16/9;background:#171b18}
+    .usa-media .media-placeholder{color:#f2efe8}
+    .project-link,.skills-cv{display:inline-flex;align-items:center;justify-content:space-between;gap:18px;width:max-content;margin-top:18px;padding:11px 16px;border:1px solid currentColor;border-radius:100px;color:inherit;text-decoration:none;font:500 11px var(--mono);letter-spacing:.04em;text-transform:uppercase;transition:.25s ease}
+    .project-link:hover,.skills-cv:hover{background:#171914;color:#f2efe8;border-color:#171914;transform:translateY(-2px)}
+    .skills-cv{margin-top:34px;background:#171914;color:#f2efe8;border-color:#171914}
+    .skills-cv:hover{background:#f15a29;border-color:#f15a29}
+    @media(max-width:900px){.hero-title-row{grid-template-columns:minmax(0,1fr) 190px}.media-gallery.two{grid-template-columns:1fr 1fr}}
+    @media(max-width:560px){.hero-title-row{display:block}.profile-frame{width:150px;margin:0 0 30px auto}.media-gallery.two,.media-gallery.three{grid-template-columns:1fr;grid-template-rows:none}.media-gallery.three .media-frame:first-child{grid-row:auto}.media-gallery.three .media-frame{min-height:210px}}
+  </style>
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <header class="nav-wrap">
+    <nav class="nav shell" aria-label="Navigation principale">
+      <a class="brand" href="#top" aria-label="Retour en haut">OA<span>.</span></a>
+      <div class="nav-links">
+        <a href="#parcours">Parcours</a>
+        <a href="#projets">Projets</a>
+        <a href="#apropos">À propos</a>
+      </div>
+      <a class="contact-pill" href="#contact">Me contacter <span>↗</span></a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero shell">
+      <div class="eyebrow"><span class="live-dot"></span> Disponible pour échanger</div>
+      <div class="hero-title-row">
+        <h1>Ingénieur.<br><em>Curieux</em> par nature.</h1>
+        <figure class="media-frame profile-frame">
+          <img src="images/profil.jpg" alt="Portrait d’Oumar Abakar" onerror="this.style.display='none'">
+          <span class="media-placeholder">Photo de profil<br>images/profil.jpg</span>
+        </figure>
+      </div>
+      <div class="hero-bottom">
+        <p>Né au Tchad, formé en France et passé par les États-Unis, je transforme des sujets complexes en projets concrets — de l’aéronautique à l’accès à l’eau.</p>
+        <a class="round-link" href="#parcours" aria-label="Découvrir le parcours">↓</a>
+      </div>
+      <div class="route" aria-label="Parcours géographique">
+        <span>Tchad</span><i></i><span>France</span><i></i><span>Durham</span><i></i><span>Istanbul</span><i></i><span>France / Belgique</span>
+      </div>
+    </section>
+
+    <section class="statement" id="apropos">
+      <div class="shell statement-grid">
+        <span class="section-num">01 — PROFIL</span>
+        <div>
+          <p class="display-copy">Je suis ingénieur en science des matériaux, spécialisé en aéronautique. Mais l’ingénierie est pour moi un point de départ, pas une limite.</p>
+          <div class="about-columns">
+            <p>J’ai choisi les matériaux pour leur polyvalence : ils relient des mondes aussi différents que la sidérurgie, la microélectronique et l’aéronautique.</p>
+            <p>Mon fil conducteur : comprendre le problème, apprendre vite et mener une idée jusqu’à un résultat utile.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="journey shell" id="parcours">
+      <div class="section-head">
+        <span class="section-num">02 — PARCOURS</span>
+        <h2>Expériences</h2>
+        <p>Chronologie décroissante</p>
+      </div>
+
+      <article class="experience featured reveal">
+        <div class="exp-date"><span>2026</span><small>AUJOURD’HUI</small></div>
+        <div class="exp-main">
+          <div class="exp-meta">Vesuvius · Frontière franco-belge</div>
+          <h3>Ingénieur VIE — Recherche matériaux réfractaires</h3>
+          <p>Recherche et développement de matériaux réfractaires pour la métallurgie et la production d’acier.</p>
+          <div class="tags"><span>R&D</span><span>Réfractaires</span><span>Sidérurgie</span></div>
+          <div class="media-gallery one">
+            <figure class="media-frame"><img src="images/vesuvius.jpg" alt="Travail de recherche sur les matériaux réfractaires" loading="lazy" onerror="this.style.display='none'"><span class="media-placeholder">1 image · Vesuvius<br>images/vesuvius.jpg</span></figure>
+          </div>
+        </div>
+      </article>
+
+      <article class="experience reveal">
+        <div class="exp-date"><span>2023—25</span></div>
+        <div class="exp-main">
+          <div class="exp-meta">Portland State University · À distance</div>
+          <h3>Traduction scientifique</h3>
+          <p>Traduction de documents scientifiques du français vers l’anglais : une façon de perfectionner la langue tout en explorant des sujets variés.</p>
+          <div class="tags"><span>FR → EN</span><span>Sciences</span></div>
+        </div>
+      </article>
+
+      <article class="experience reveal">
+        <div class="exp-date"><span>2023—24</span></div>
+        <div class="exp-main">
+          <div class="exp-meta">Hudson Hall Research Center · Durham, USA</div>
+          <h3>Chercheur invité — Modélisation structurelle</h3>
+          <p>Étude des vibrations de structures d’ailes aéronautiques et amélioration des modèles de simulation. Le sujet m’a tellement passionné que j’ai prolongé mon programme d’un an.</p>
+          <blockquote>« Une petite équipe, une recherche de très haut niveau. »</blockquote>
+          <div class="tags"><span>Aéroélasticité</span><span>Simulation</span><span>Lean</span></div>
+          <div class="media-gallery two">
+            <figure class="media-frame"><img src="images/durham-recherche.jpg" alt="Environnement de recherche à Durham" loading="lazy" onerror="this.style.display='none'"><span class="media-placeholder">Image 1 · Recherche<br>images/durham-recherche.jpg</span></figure>
+            <figure class="media-frame"><img src="images/durham-campus.jpg" alt="Campus universitaire à Durham" loading="lazy" onerror="this.style.display='none'"><span class="media-placeholder">Image 2 · Campus<br>images/durham-campus.jpg</span></figure>
+          </div>
+        </div>
+      </article>
+
+      <article class="experience accent reveal">
+        <div class="exp-date"><span>Depuis<br>2022</span></div>
+        <div class="exp-main">
+          <div class="exp-meta">Water4Chad · Tchad</div>
+          <h3>Responsable de projets bénévole</h3>
+          <p>Une histoire familiale commencée par un coup de main sur un logo et un site web, devenue un engagement dans la conduite de projets d’accès à l’eau.</p>
+          <ul class="compact-list">
+            <li>Études, planification et budgets</li>
+            <li>Équipements, contrats et logistique</li>
+            <li>Suivi de chantier et rapports partenaires</li>
+          </ul>
+          <div class="tags"><span>Hydraulique</span><span>Solaire</span><span>Impact</span></div>
+          <div class="media-gallery three">
+            <figure class="media-frame"><img src="images/water4chad-chantier.jpg" alt="Chantier Water4Chad" loading="lazy" onerror="this.style.display='none'"><span class="media-placeholder">Image 1 · Chantier<br>images/water4chad-chantier.jpg</span></figure>
+            <figure class="media-frame"><img src="images/water4chad-equipe.jpg" alt="Équipe Water4Chad sur le terrain" loading="lazy" onerror="this.style.display='none'"><span class="media-placeholder">Image 2 · Équipe<br>images/water4chad-equipe.jpg</span></figure>
+            <figure class="media-frame"><img src="images/water4chad-eau.jpg" alt="Arrivée de l’eau dans un projet Water4Chad" loading="lazy" onerror="this.style.display='none'"><span class="media-placeholder">Image 3 · Arrivée de l’eau<br>images/water4chad-eau.jpg</span></figure>
+          </div>
+        </div>
+      </article>
+
+      <article class="experience reveal">
+        <div class="exp-date"><span>2022—23</span></div>
+        <div class="exp-main">
+          <div class="exp-meta">ENSIL-ENSCI × Safran · Limoges</div>
+          <h3>Premier projet R&D mené de bout en bout</h3>
+          <p>Planification, plans d’expériences, essais et analyse d’un revêtement en alumine destiné à protéger les parties chaudes des moteurs aéronautiques.</p>
+          <div class="tags"><span>Alumine</span><span>Plans d’expériences</span><span>Aéronautique</span></div>
+        </div>
+      </article>
+
+      <article class="experience reveal">
+        <div class="exp-date"><span>Stage</span></div>
+        <div class="exp-main">
+          <div class="exp-meta">Istanbul · Turquie</div>
+          <h3>Projets techniques et développement international</h3>
+          <p>Parti chercher des fournisseurs de pompes pour Water4Chad, j’ai aussi programmé un simulateur citoyen d’émissions de CO₂, prototypé un générateur d’eau atmosphérique et contribué au dossier d’intégration de Water4Chad à l’ECOSOC.</p>
+          <p class="personal-note">Istanbul m’a marqué comme un carrefour vivant entre l’Orient, l’Occident et le monde slave.</p>
+        </div>
+      </article>
+    </section>
+
+    <section class="projects" id="projets">
+      <div class="shell">
+        <div class="section-head light">
+          <span class="section-num">03 — PROJETS</span>
+          <h2>Construire pour apprendre.</h2>
+          <p>Des expériences personnelles, avec leurs réussites et leurs limites.</p>
+        </div>
+        <div class="project-grid">
+          <article class="project-card project-daz reveal">
+            <div class="project-top"><span>01</span><span>LANGUE · WEB</span></div>
+            <div class="glyph">DAZA<span>GARA</span></div>
+            <div class="project-copy">
+              <h3>Dazagara.com</h3>
+              <p>Une plateforme créée sans savoir coder au départ, pour structurer l’apprentissage du dazaga, la langue de mon peuple d’origine.</p>
+              <p class="result">600 € récoltés sur 25 000 € : un échec financier, mais la preuve que je pouvais réaliser et présenter un projet de zéro.</p>
+              <a class="project-link" href="http://kck.st/4dt8kRC" target="_blank" rel="noopener noreferrer" aria-label="Voir la campagne Kickstarter Dazagara">Voir la campagne Kickstarter <span>↗</span></a>
+            </div>
+          </article>
+          <article class="project-card project-water reveal">
+            <div class="project-top"><span>02</span><span>EAU · TERRAIN</span></div>
+            <div class="project-stat"><strong>2015</strong><span>création<br>familiale</span></div>
+            <div class="project-copy">
+              <h3>Water4Chad</h3>
+              <p>Des systèmes de forage et de pompage solaire conçus pour fonctionner dans des zones isolées du Tchad.</p>
+              <p class="result">La technique n’a de valeur que si l’installation peut réellement être utilisée, entretenue et financée localement.</p>
+            </div>
+          </article>
+          <article class="project-card project-sneaker reveal">
+            <div class="project-top"><span>03</span><span>E-COMMERCE</span></div>
+            <div class="shoe" aria-hidden="true">◒</div>
+            <div class="project-copy">
+              <h3>Sneakers personnalisées</h3>
+              <p>Une boutique lancée sur les réseaux sociaux pour tester la création de produit, la présentation et la vente à de vrais clients.</p>
+              <p class="result">Quelques commandes, puis un arrêt assumé lorsque d’autres priorités ont pris le dessus.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="culture shell">
+      <div class="section-head">
+        <span class="section-num">04 — AU-DELÀ DU TRAVAIL</span>
+        <h2>Ce qui nourrit ma curiosité</h2>
+      </div>
+      <div class="culture-grid">
+        <article><span>01</span><h3>Image</h3><p>L’image me fascine depuis l’adolescence. J’ai appris à filmer et monter pour mes campagnes, mes projets et les réseaux sociaux.</p><small>DaVinci Resolve · GIMP</small></article>
+        <article><span>02</span><h3>Fabrication</h3><p>Prototypage de drones, impression 3D, mécanique : démonter, comprendre, reconstruire et tester.</p><small>Drones · 3D · Mécanique</small></article>
+        <article><span>03</span><h3>Sport</h3><p>Workout, natation et vélo, pour le plaisir autant que pour entretenir une discipline personnelle.</p><small>Régularité · Progression</small></article>
+      </div>
+    </section>
+
+    <section class="american-note">
+      <div class="shell quote-grid">
+        <p>« Je pensais connaître les États-Unis avant d’y aller. »</p>
+        <div>
+          <h2>Durham, la bonne surprise</h2>
+          <p>J’y ai découvert une culture plus différente que prévu : des gens extravertis, des étudiants qui appellent leurs professeurs par leur prénom et une efficacité difficile à ignorer.</p>
+          <p>Les campus ressemblent réellement à ceux des films : activités innombrables, sports presque professionnels, personnalités mondialement connues et chaînes nationales venues couvrir des rencontres universitaires.</p>
+          <figure class="media-frame usa-media">
+            <img src="images/etats-unis.gif" alt="Souvenir animé de la vie universitaire aux États-Unis" loading="lazy" onerror="this.style.display='none'">
+            <span class="media-placeholder">GIF · États-Unis<br>images/etats-unis.gif</span>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="skills shell">
+      <span class="section-num">05 — OUTILS & COMPÉTENCES</span>
+      <div class="skill-rows">
+        <div><h3>Gestion de projets</h3><p>Planification · Budgets · Coordination · Contrats · Logistique · Reporting</p></div>
+        <div><h3>Ingénierie</h3><p>Matériaux · Aéronautique · Modélisation · Expérimentation · Analyse</p></div>
+        <div><h3>Méthodes</h3><p>AMDEC · Ishikawa · Gantt · Lean · Amélioration continue</p></div>
+        <div><h3>Outils</h3><p>MATLAB · Ansys · CATIA · SolidWorks · VBA · DaVinci Resolve</p></div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="shell">
+        <span class="section-num">06 — CONTACT</span>
+        <h2>Une idée utile,<br>ambitieuse ou <em>inhabituelle ?</em></h2>
+        <p>Je suis ouvert aux échanges autour de l’ingénierie, de la recherche, de l’innovation et des projets à impact concret.</p>
+        <a class="contact-cta" href="mailto:coumar.abakar@outlook.com">Écrivez-moi <span>↗</span></a>
+        <div class="contact-links"><a href="https://www.linkedin.com/in/oumar-abakar-2796623b2/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer shell"><span>© <span id="year"></span> Oumar Abakar</span><span>France · Belgique · Tchad</span><a href="#top">Retour en haut ↑</a></footer>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
