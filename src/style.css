@@ -3,3 +3,50 @@
 @media(max-width:900px){.shell{width:min(100% - 36px,1240px)}.nav-links{display:none}.hero{min-height:700px;padding-top:130px}.hero h1{font-size:20vw}.hero-bottom p{max-width:80%;font-size:15px}.route span:nth-of-type(2),.route span:nth-of-type(4),.route i:nth-of-type(2),.route i:nth-of-type(4){display:none}.statement-grid,.section-head,.quote-grid{grid-template-columns:1fr;gap:25px}.about-columns{margin:45px 0 0;grid-template-columns:1fr}.section-head>p{display:none}.experience,.experience:has(.visual){grid-template-columns:105px 1fr}.visual{grid-column:2;min-height:220px}.project-grid{grid-template-columns:1fr}.project-daz{grid-row:auto;min-height:620px}.culture-grid{grid-template-columns:1fr}.culture-grid article,.culture-grid article+article{padding:28px 0;border-right:0;border-bottom:1px solid var(--line);min-height:auto}.skill-rows>div{grid-template-columns:1fr}.quote-grid{gap:55px}}
 @media(max-width:560px){.nav{height:68px}.contact-pill{padding:8px 11px}.hero{height:auto;min-height:720px}.hero h1{font-size:21vw;line-height:.82;margin-top:auto;margin-bottom:70px}.hero-bottom{align-items:center}.round-link{width:46px;height:46px}.route{margin-top:70px}.route span:last-child{display:none}.statement,.journey,.projects,.culture,.american-note,.skills,.contact{padding:88px 0}.display-copy{font-size:38px}.experience,.experience:has(.visual){grid-template-columns:1fr;padding:35px 0}.exp-date{margin-bottom:8px}.visual{grid-column:1}.project-card{min-height:520px;padding:23px}.project-daz{min-height:590px}.skill-rows>div{gap:4px}.contact-links,.footer{flex-direction:column;align-items:flex-start}.footer{justify-content:center;gap:7px;padding:25px 0}.contact h2{font-size:16vw}.nav-wrap{background:rgba(242,239,232,.75);backdrop-filter:blur(8px)}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}.nav-wrap,.round-link{transition:none}}
+
+.american-note .quote-grid {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+}
+
+.american-note .quote-grid > * {
+  min-width: 0;
+}
+
+.american-note .usa-media {
+  width: 100%;
+  margin: 32px 0 0;
+  aspect-ratio: 16 / 9;
+}
+
+.american-note .usa-media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 800px) {
+  .american-note .quote-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .american-note .quote-grid > p {
+    font-size: clamp(36px, 11vw, 55px);
+  }
+
+  .american-note {
+    padding: 80px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .american-note .quote-grid {
+    gap: 28px;
+  }
+
+  .american-note .usa-media {
+    margin-top: 24px;
+    aspect-ratio: 4 / 3;
+  }
+}
